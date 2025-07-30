@@ -1,9 +1,24 @@
-let today = new Date();
-let formattedDate = `${today.getMonth() + 1}.${today.getDate()}`;
-let formattedYear = today.getFullYear();
-let weekday = today.toLocaleDateString('en-US', {weekday: 'long'});
+"use client"
+import { useEffect, useState } from "react";
 
 export function Intro() {
+  const [formattedDate, setFormattedDate] = useState("");
+  const [formattedYear, setFormattedYear] = useState("");
+  const [weekday, setWeekday] = useState("");
+
+  useEffect(() => {
+    const updateDate = () => {
+      const today = new Date();
+      setFormattedDate(`${today.getMonth() + 1}.${today.getDate()}`);
+      setFormattedYear(today.getFullYear().toString());
+      setWeekday(today.toLocaleDateString('en-US', { weekday: 'long' }));
+    };
+    updateDate();
+
+    const timer = setInterval(updateDate, 60 * 1000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="flex flex-col md:flex-row items-center md:justify-between mt-6 mb-6 md:mt-12 md:mb-10 px-2 md:px-0">
       <div className="flex flex-row justify-between items-center w-full">
