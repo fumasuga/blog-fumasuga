@@ -23,7 +23,7 @@ export function Header() {
   }, []);
 
   return (
-    <section className="flex flex-col md:flex-row items-center md:justify-between mt-6 mb-6 md:mt-12 md:mb-10 px-2 md:px-0">
+    <section className="flex flex-col md:flex-row items-center md:justify-between mt-6 mb-12 md:mt-12 md:mb-10 px-2 md:px-0">
       <div className="flex flex-row justify-between items-center w-full">
         <div>
           <h1 className="text-2xl md:text-6xl font-bold tracking-tighter leading-tight mb-0">
