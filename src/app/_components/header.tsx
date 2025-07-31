@@ -43,10 +43,10 @@ export function Header() {
           </p>
           <div className="flex flex-col items-end justify-center text-right ml-2 md:ml-4">
             <p className="text-gray-600 text-xs md:text-sm">
-              {formattedYear}
+              {weekday}
             </p>
             <p className="text-gray-600 text-xs md:text-sm">
-              {weekday}
+              {formattedYear}
             </p>
           </div>
         </div>
