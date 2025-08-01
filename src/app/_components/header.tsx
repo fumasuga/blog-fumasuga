@@ -26,7 +26,7 @@ export function Header() {
     <section className="flex flex-col md:flex-row items-center md:justify-between mt-6 mb-12 md:mt-12 md:mb-10 px-2 md:px-0">
       <div className="flex flex-row justify-between items-center w-full">
         <div>
-          <h1 className="text-2xl md:text-6xl font-bold tracking-tighter leading-tight mb-0">
+          <h1 className="text-3xl md:text-6xl font-bold tracking-tighter leading-tight mb-0">
             {pathname !== "/" ? (
               <Link href="/" className="hover:underline">
                 Tech Blog
@@ -38,7 +38,7 @@ export function Header() {
           </h1>
         </div>
         <div className="flex flex-row items-center">
-          <p className="text-2xl md:text-6xl font-bold tracking-tighter leading-tight md:pr-2 mb-0">
+          <p className="text-3xl md:text-6xl font-bold tracking-tighter leading-tight md:pr-2 mb-0">
             {formattedDate}
           </p>
           <div className="flex flex-col items-end justify-center text-right ml-2 md:ml-4">
